@@ -27,7 +27,7 @@ public class PresentationV2 {
             Constructor<?> metierConstructor = cMetierClass.getDeclaredConstructor(IDao.class);
             IMetier metier = (IMetier) metierConstructor.newInstance(dao);
 
-            // Avec setter
+            // avec setter
             Method setDao = cMetierClass.getDeclaredMethod("setDao", IDao.class);
             setDao.invoke(metier, dao);
         } catch (Exception e) {
